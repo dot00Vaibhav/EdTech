@@ -2,38 +2,14 @@
 <div align="center">
 <h1>StudyNotion: The Ed-Tech Platform</h1>
 
-<a href="https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform"><img src="https://sloc.xyz/github/Rushik-Ghuntala/StudyNotion-EdTech-Platform" alt="LOC"/></a>
-<a href="https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform"><img src="https://visitor-badge.laobi.icu/badge?page_id=Rushik-Ghuntala.StudyNotion-EdTech-Platform" alt="visitor count"/></a>
-<a href="https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform/stargazers"><img src="https://img.shields.io/github/stars/Rushik-Ghuntala/StudyNotion-EdTech-Platform" alt="Stars Badge"/></a>
-<!-- 
-<a href="https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform/network/members"><img src="https://img.shields.io/github/forks/Rushik-Ghuntala/StudyNotion-EdTech-Platform" alt="Forks Badge"/></a>
-<a href="https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Rushik-Ghuntala/StudyNotion-EdTech-Platform?color=2b9348"></a>
--->
-
 <b><i>If you appreciate my work, please</i></b> 🌟 <b><i>this repository. It motivates me. 🚀🚀</i></b>
 
 </div>
 
-<img src="https://socialify.git.ci/Rushik-Ghuntala/StudyNotion-EdTech-Platform/image?description=1&descriptionEditable=StudyNotion%20is%20a%20fully%20functional%20ed-tech%20platform%20that%20enables%20users%20to%20create,%20consume,%20and%20rate%20educational%20content.&font=Raleway&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light" alt="StudyNotion - By Rushik Ghuntala" width="100%" height="320" align="center" />
-
-<!--
-<img src="https://github.com/Rushik-Ghuntala/NEW2/assets/97880269/bd68268d-399a-463e-acb3-1f3c31cf98a1" alt="Home Page"  style="margin: auto; width: 50%;"  />
--->
-
-<!-- This repository contains all the Data Structures and Algorithms concepts and their implementation in several ways, programming questions and Interview questions. The main aim of this repository is to help students who are learning Data Structures and Algorithms or preparing for an interview. This contains questions from popular coding platforms including [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), [Codechef](https://www.codechef.com/), [GeeksforGeeks](https://practice.geeksforgeeks.org/explore/), and many more. 
-
-If you're practising on the coding platforms mentioned above, also if you want to contribute those then you can add the questions in this repository.
--->
 <hr>
 
-### Live Website: 💡 <a href="https://studynotion-rushik-ghuntala.vercel.app/" target="_blank"><strong>StudyNotion »</strong></a> 
+### Live Website: 💡 <a href="" target="_blank"><strong>StudyNotion »</strong></a> 
 
-### Explore the Documentation: 📝 <a href="https://docs.google.com/document/d/1EGAhe3zHebl7BXTI8RGuNj9f7xQzbcV86h-xoEdxcYk/edit#heading=h.gjdgxs" target="_blank"><strong>Explore the Docs »</strong></a>
-
-### Figma File: 💄 <a href="https://www.figma.com/design/Mikd0FjHKAofUlWQSi70nf/StudyNotion_shared?node-id=0-1&t=X2SJmjjqzckb6J7t-0" target="_blank"><strong>Explore the Designs »</strong></a>
-
-
-<!-- [ url: "https://studynotion-rushik-ghuntala.vercel.app" ] -->
 <hr>
 
 <!-- TABLE OF CONTENTS -->
@@ -58,9 +34,6 @@ If you're practising on the coding platforms mentioned above, also if you want t
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-![Log In Page (1)](https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform/assets/97880269/291f8ffa-42f9-4cd7-b9e9-7afbc978927f)
-
 
 StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content. The platform is built using the MERN stack, which includes ReactJS, NodeJS, MongoDB, and ExpressJS.
 
@@ -133,11 +106,6 @@ To get a local copy up and running follow these simple example steps.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<hr>
-
-## Connect with me: [![Email Badge](https://img.shields.io/badge/-Email-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pranaygupta.aec@gmail.com)](mailto:rushisoni2003@gmail.com) [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thepranaygupta/)](https://linkedin.com/in/rushik-ghuntala-4a165222a/) [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://x.com/Rushik_Soni_) [![Discord](https://img.shields.io/badge/-Discord-7289DA?style=flat-square&logo=discord&logoColor=white)](https://discordapp.com/users/901117080533889054)
-
-<hr>
 
 ## Happy Coding 👨‍💻
 
