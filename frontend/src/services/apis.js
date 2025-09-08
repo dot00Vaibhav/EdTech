@@ -1,5 +1,5 @@
 // Always hit backend running on port 5000
-const BASE_URL = `${import.meta.env.REACT_APP_BASE_URL}/api/v1`
+const BASE_URL = `${process.env.REACT_APP_BASE_URL}/api/v1`
 
 // ========== AUTH ENDPOINTS ==========
 export const endpoints = {
