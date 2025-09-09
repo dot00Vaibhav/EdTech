@@ -8,7 +8,7 @@
 
 <hr>
 
-### Live Website: 💡 <a href="" target="_blank"><strong>StudyNotion »</strong></a> 
+### Live Website: 💡 <a href="https://studynotion-sand-sigma.vercel.app/" target="_blank"><strong>StudyNotion »</strong></a> 
 
 <hr>
 
@@ -68,45 +68,6 @@ In summary, StudyNotion is a versatile and intuitive ed-tech platform that is de
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Installation
-
-1. Get a free API Key from Cloudinary and Razorpay
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Rushik-Ghuntala/StudyNotion-EdTech-Platform.git
-   ```
-3. Go to the
-   ```sh
-   cd server/
-   ```
-4. Make .env File and give key and values as .env.sample File difined
-5. Install NPM packages in server file
-   ```sh
-   npm install
-   ```
-6. Go to the root file
-   ```sh
-   cd ..
-   ```
-7. Make .env File and give key and values as .env.sample File difined
-8. Install NPM packages in root file
-   ```sh
-   npm install
-   ```
-9. Run the Project from root file
-   ```sh
-   npm run dev
-   ```
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Happy Coding 👨‍💻
 
 
