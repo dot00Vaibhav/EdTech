@@ -1,5 +1,6 @@
 // Importing necessary modules and packages
 const express = require("express");
+const os = require("os");
 const app = express();
 const userRoutes = require("./routes/user");
 const profileRoutes = require("./routes/profile");
@@ -27,14 +28,14 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: "studynotion-sand-sigma.vercel.app",
+		origin: "https://studynotion-sand-sigma.vercel.app",
 		credentials: true,
 	})
 );
 app.use(
 	fileUpload({
 		useTempFiles: true,
-		tempFileDir: "/tmp/",
+		tempFileDir: os.tmpdir(), // cross-platform temp directory
 	})
 );
 
