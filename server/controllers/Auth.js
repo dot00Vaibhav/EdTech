@@ -156,6 +156,8 @@ exports.login = async (req, res) => {
       const options = {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         httpOnly: true,
+        secure: true, // Ensure the cookie is only sent over HTTPS
+        sameSite: "None", // Adjust sameSite attribute for cross-site requests
       }
       res.cookie("token", token, options).status(200).json({
         success: true,
