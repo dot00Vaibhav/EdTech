@@ -26,12 +26,26 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://studynotion-sand-sigma.vercel.app",
+  "https://studynotion-git-main-vaibhavs-projects-c8d866ee.vercel.app",
+];
+
 app.use(
-	cors({
-		origin: "https://studynotion-sand-sigma.vercel.app",
-		credentials: true,
-	})
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
 );
+
 app.use(
 	fileUpload({
 		useTempFiles: true,
