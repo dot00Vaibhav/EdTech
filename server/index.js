@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: "*",
+		origin: "studynotion-sand-sigma.vercel.app",
 		credentials: true,
 	})
 );
