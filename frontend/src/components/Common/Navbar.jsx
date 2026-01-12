@@ -34,6 +34,13 @@ function Navbar() {
     })()
   }, [])
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    // Close mobile menu on route change
+    setMenuOpen(false)
+  }, [location.pathname])
+
   // console.log("sub links", subLinks)
 
   const matchRoute = (route) => {
@@ -42,7 +49,7 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
+      className={`relative flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
         location.pathname !== "/" ? "bg-richblack-800" : ""
       } transition-all duration-200`}
     >
@@ -135,9 +142,81 @@ function Navbar() {
           )}
           {token !== null && <ProfileDropdown />}
         </div>
-        <button className="mr-4 md:hidden">
+        <button
+          className="mr-4 md:hidden"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle menu"
+        >
           <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
         </button>
+
+        {menuOpen && (
+          <div className="absolute top-14 left-0 right-0 z-50 md:hidden">
+            <div className="mx-4 rounded-md border border-richblack-700 bg-richblack-800 p-4">
+              <ul className="flex flex-col gap-3">
+                {NavbarLinks.map((link, idx) => (
+                  <li key={idx}>
+                    {link.title === "Catalog" ? (
+                      <>
+                        <p className="mb-2 text-sm font-semibold text-richblack-25">Catalog</p>
+                        {Array.isArray(subLinks) && subLinks.length > 0 ? (
+                          subLinks.map((subLink, i) => (
+                            <Link
+                              to={`/catalog/${subLink.name.split(" ").join("-").toLowerCase()}`}
+                              key={i}
+                              onClick={() => setMenuOpen(false)}
+                              className="block rounded-md px-3 py-2 text-richblack-25 hover:bg-richblack-700"
+                            >
+                              {subLink.name}
+                            </Link>
+                          ))
+                        ) : (
+                          <p className="text-richblack-400">No Courses Found</p>
+                        )}
+                      </>
+                    ) : (
+                      <Link to={link?.path} onClick={() => setMenuOpen(false)}>
+                        <p className="text-richblack-25">{link.title}</p>
+                      </Link>
+                    )}
+                  </li>
+                ))}
+                <li className="mt-2 border-t border-richblack-700 pt-3">
+                  <div className="flex flex-col gap-2">
+                    {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
+                      <Link to="/dashboard/cart" className="relative" onClick={() => setMenuOpen(false)}>
+                        <div className="flex items-center gap-2">
+                          <AiOutlineShoppingCart className="text-xl text-richblack-100" />
+                          <span className="text-richblack-25">Cart</span>
+                        </div>
+                      </Link>
+                    )}
+                    {token === null && (
+                      <Link to="/login" onClick={() => setMenuOpen(false)}>
+                        <button className="w-full rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 text-left">
+                          Log in
+                        </button>
+                      </Link>
+                    )}
+                    {token === null && (
+                      <Link to="/signup" onClick={() => setMenuOpen(false)}>
+                        <button className="w-full rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 text-left">
+                          Sign up
+                        </button>
+                      </Link>
+                    )}
+                    {token !== null && (
+                      <div onClick={() => setMenuOpen(false)}>
+                        <ProfileDropdown />
+                      </div>
+                    )}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
