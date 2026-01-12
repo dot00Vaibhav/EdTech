@@ -17,7 +17,7 @@ router.post(
   isStudent,
   sendPaymentSuccessEmail
 )
-router.post("/verifySignature", verifySignature)
+// router.post("/verifySignature", verifySignature)
 router.get("/sendRazorpayKey", sendRazorpayKey)
 
 module.exports = router
