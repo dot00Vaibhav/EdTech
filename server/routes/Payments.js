@@ -3,9 +3,10 @@ const express = require("express")
 const router = express.Router()
 const {
   capturePayment,
-  // verifySignature,
+  verifySignature,
   verifyPayment,
   sendPaymentSuccessEmail,
+  sendRazorpayKey,
 } = require("../controllers/payments")
 const { auth, isInstructor, isStudent, isAdmin } = require("../middleware/auth")
 router.post("/capturePayment", auth, isStudent, capturePayment)
@@ -16,6 +17,7 @@ router.post(
   isStudent,
   sendPaymentSuccessEmail
 )
-// router.post("/verifySignature", verifySignature)
+router.post("/verifySignature", verifySignature)
+router.get("/sendRazorpayKey", sendRazorpayKey)
 
 module.exports = router
