@@ -27,24 +27,26 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://studynotion-sand-sigma.vercel.app",
-  "https://studynotion-git-main-vaibhavs-projects-c8d866ee.vercel.app",
-];
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(",")
+  : [];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
+      if (!origin) return callback(null, true); // Razorpay, server calls
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
       }
+
+      console.error("Blocked by CORS:", origin);
+      return callback(null, false);
     },
     credentials: true,
   })
 );
+
 
 app.use(
 	fileUpload({
