@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router()
 const {
   capturePayment,
-  verifySignature,
+  // verifySignature,
   verifyPayment,
   sendPaymentSuccessEmail,
   sendRazorpayKey,
