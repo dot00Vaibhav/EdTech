@@ -200,3 +200,10 @@ const enrollStudents = async (courses, userId, res) => {
     }
   }
 }
+
+exports.sendRazorpayKey = async (req, res) => {
+  return res.status(200).json({
+    success: true,
+    key: process.env.RAZORPAY_KEY_ID || process.env.RAZORPAY_KEY,
+  });
+};
